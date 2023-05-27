@@ -1,0 +1,301 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: max-content;
+    background-color: #f8c963;
+    /* background: transparent; */
+    padding: 1.8rem 5rem;
+    isolation: isolate;
+    z-index: 5;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    font-family: 'Mulish', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    width: 70%;
+    justify-content: center;
+}
+
+nav a {
+    font-size: 1.8rem;
+    text-decoration: none;
+}
+
+nav a#logo {
+    color: #000000;
+    width: 30%;
+    font-weight: 700;
+}
+
+nav ul a {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+nav ul a:hover {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+
+h1 {
+    font-size: 4rem;
+}
+
+#ham-menu {
+    display: none;
+}
+
+nav ul.active {
+    left: 0;
+}
+
+@media only screen and (max-width: 991px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    header {
+        padding: 2.2rem 5rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 50%;
+    }
+
+    #ham-menu {
+        display: block;
+        color: #ffffff;
+    }
+
+    nav a#logo,
+    #ham-menu {
+        font-size: 3.2rem;
+    }
+
+    nav ul {
+        background-color: black;
+        position: fixed;
+        left: -100vw;
+        top: 73.6px;
+        width: 100vw;
+        height: calc(100vh - 73.6px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transition: 1s;
+        gap: 0;
+    }
+
+    .details-sections {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        padding: 2rem 5rem;
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 575px) {
+    html {
+        font-size: 46.87%;
+    }
+
+    header {
+        padding: 2rem 3rem;
+    }
+
+    header nav a img {
+        width: 200px;
+    }
+
+    nav ul {
+        top: 65.18px;
+        height: calc(100vh - 65.18px);
+    }
+
+    /* .details-sec {
+        flex-direction: column;
+    }
+    .details-sec1 {
+        width: 100%;
+    }
+    .details-sec2 {
+        width: 100%;
+    } */
+}
+
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
+    padding-top: 60px;
+}
+
+
+/* FIRST SECTION  */
+
+.sectionfirst  img{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 70vh;
+    object-fit:cover;
+    z-index: -1;
+    /* max-width: 99vw;
+    max-height: 99vh */
+}
+
+.header-content{
+    text-align: center;
+    text-transform: capitalize;
+    height: 70vh;
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+}
+
+.header-content h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    
+}
+.header-content h3{
+    font-size: 2.5rem;
+}
+
+.btno{
+    background: #f8c963;
+    border: none;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.7rem;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+}
+
+
+/* Service Secton */
+
+.servicesection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2rem;
+}
+
+.servicesection .cards{
+    padding: 2rem;
+}
+
+.cards img{
+    object-fit: cover;
+    width: 400px;
+    border-radius: 30px;
+}
+
+.cards h2{
+    font-family: 'Oswald', sans-serif;
+    padding-top: 2rem;
+}
+
+.cards p{
+    font-family: 'Mulish' , sans-serif;
+    font-size: 1.6rem;
+    padding-top: 1rem;
+}
+
+.about-us{
+    font-family: 'Mulish' , sans-serif;
+    font-size: 1.6rem;
+    padding: 2rem 9rem;
+    
+}
+
+
+
+/* Gallery section Start */
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* width: 90%; */
+    margin: 0 auto;
+    padding-top: 1rem;
+    z-index: 5;
+}
+
+.gallery a{
+    height: 200px;
+    width: 300px;
+    margin: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 3px 5px #000000;
+    z-index:5;
+    isolation: isolate;
+}
+
+.gallery a img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    isolation: isolate;
+    z-index: inherit;
+    isolation: isolate;
+}
+
+/* Gallery section End */
